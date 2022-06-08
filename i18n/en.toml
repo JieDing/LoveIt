@@ -50,6 +50,9 @@ other = "Powered by {{ .Hugo }} | Theme - {{ .Theme }}"
 # === partials/footer.html ===
 
 # === partials/comment.html ===
+[walineLang]
+other = "en"
+
 [valineLang]
 other = "en"
 

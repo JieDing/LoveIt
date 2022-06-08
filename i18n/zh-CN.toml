@@ -51,6 +51,9 @@ other = "由 {{ .Hugo }} 强力驱动 | 主题 - {{ .Theme }}"
 # === partials/footer.html ===
 
 # === partials/comment.html ===
+[walineLang]
+other = "zh-CN"
+
 [valineLang]
 other = "zh-CN"
 

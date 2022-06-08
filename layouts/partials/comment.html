@@ -30,6 +30,28 @@
             </noscript>
         {{- end -}}
 
+        {{- /* Waline Comment System */ -}}
+        {{- $waline := $comment.waline | default dict -}}
+        {{- if $waline.enable -}}
+            <head>
+                <!-- ... -->
+                <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+                <link
+                        rel="stylesheet"
+                        href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+                />
+                <!-- ... -->
+            </head>
+            <div id="waline" class="comment"></div>
+            <script>
+                Waline.init({
+                    el: '#waline',
+                    serverURL: 'https://my-repo-plum.vercel.app/',
+                    lang: {{($waline.lang | default (T "walineLang"))}}
+                });
+            </script>
+        {{- end -}}
+
         {{- /* Valine Comment System */ -}}
         {{- $valine := $comment.valine | default dict -}}
         {{- if $valine.enable -}}
